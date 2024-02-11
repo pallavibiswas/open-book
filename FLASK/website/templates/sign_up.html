@@ -1,0 +1,23 @@
+{% extends "index.html" %} {% block title %}Sign Up{% endblock %} 
+{% block content %}
+<form action="" method="POST">
+    <h3 align = "center">Sign Up</h3>
+    <div class="form-group">
+        <input type="email" class="form-control" name="email" id="email" placeholder="Enter Email">
+    </div>
+    <br>
+    <div class="form-group">
+        <input type="text" class="form-control" name="name" id="name" placeholder="Enter Name">
+    </div>
+    <br>
+    <div class="form-group">
+        <input type="password" class="form-control" name="password1" id="password1" placeholder="Enter Password">
+    </div>
+    <br>
+    <div class="form-group">
+        <input type="password" class="form-control" name="password2" id="password2" placeholder="Confirm Password">
+    </div>
+    <br/>
+    <button type="submit" class="btn btn-primary" style="background-color: rgb(121, 61, 136); border: none;">Submit</button>
+</form>
+{% endblock %}

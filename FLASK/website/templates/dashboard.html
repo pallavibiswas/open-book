@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+{% extends "index.html" %}
+{% block title %}
+Home
+{% endblock %} 
+{% block content %}
+<h1 style="color: white;">Open Book</h1>
+<div class="container card-wrapper">
+    {% for note in notes %}
+    <div class="card">
+        <div class="card-content">
+            <p>{{ note.data }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "index.html" %} {% block title %}Home{% endblock %} 
+{% block content %}
+<h1 align="center" style="color: white; padding: 20px">Notes</h1>
+<form action="" method="post">
+    <textarea name="note" id="note" class="form-control" placeholder="Start ranting here..."></textarea>
+    <br/>
+    <div align="center">
+        <button type="submit" class="btn btn-primary" style="background-color: rgb(121, 61, 136); border: none;">Add Note</button>
+    </div>
+</form>
+<ul class="list-group list-group-flush" id="notes">
+    {% for note in user.notes %}
+        <li class="list-group-item" style="margin-bottom: 20px; display: flex; justify-content: space-between; background: transparent;">
+            <p style="color: white">{{ note.data }}</p> 
+            <button type="button" onClick="deleteNote({{ note.id }})" style="position: relative; background: none; border: none; color: white">
+                <i class='bx bx-trash' style="float: right;"></i>
+            </button>
+        </li> 
+    {% endfor %}
+</ul>
+{% endblock %}
